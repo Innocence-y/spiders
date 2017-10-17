@@ -1,3 +1,11 @@
+"""
+python版本:3.6
+首先抓取猫眼电影标签:分类 地区 年代
+根据标签的三种组合 得到电影url 也就知道了这部电影是什么题材 什么地区 什么年代的属性
+
+"""
+
+
 import requests
 from lxml import etree
 
@@ -7,7 +15,7 @@ class MaoyanSpider(object):
         self.start_url = 'http://maoyan.com/films'
         self.headers = {
             'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
-            'Cookie': 'uuid=1A6E888B4A4B29B16FBA1299108DBE9C1A8251A364BCB1DEA175CC3A24715319; ci=1; __mta=155472772.1505783294508.1505783391674.1505783395557.6; _lxsdk_s=46396f0b9fd7f229bae18c40b684%7C%7C18',
+            'Cookie': '你的cookie',
             'Host': 'maoyan.com',
             'Referer': 'http://maoyan.com/',
             'Upgrade-Insecure-Requests': '1',
