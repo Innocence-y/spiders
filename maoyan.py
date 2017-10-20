@@ -151,7 +151,6 @@ class MaoyanSpider(object):
             cursor.execute(insert_sql, (
             item['movie_url'], item['movie_name'], item['ename'], item['want_see_nums'], item['piaofang'],item['movie_desc'], item['infos'],
             item['celebritys'], item['actors'], item['req_url']))
-            print('插入成功')
             conn.commit()
 
 
