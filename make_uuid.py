@@ -18,7 +18,7 @@ def get_id(num):
 
 def insert_mysql(list_id):
     try:
-        conn = pymysql.connect(host='localhost',user='root',passwd='admin2016',port=3306)
+        conn = pymysql.connect(host='localhost',user='root',passwd='密码',port=3306)
         cur = conn.cursor()
         conn.select_db('local_db')
         cur.execute('create table if not exists Activation_code(id int ,uuid varchar(50))')
