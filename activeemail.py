@@ -10,12 +10,12 @@ from database.Mydb import MySQLConn
 
 #用户邮箱激活 /user/activate 用户名 用户邮箱 激活码 发送到用户邮件
 class EmailActive(MySQLConn):
-    def __init__(self,user_name,user_eamil,active_code):
+    def __init__(self,user_name,user_email,active_code):
         self.user_name = user_name
-        self.user_eamil = user_eamil
+        self.user_email = user_email
         self.active_code = active_code
 
-    def send_active_eamil(self):
+    def send_active_email(self):
         #msg = MIMEMultipart('alternative')'related'
         msg = MIMEMultipart('related')
         msg['Subject'] = "python fan 邮箱激活"
@@ -60,5 +60,5 @@ class EmailActive(MySQLConn):
 if __name__ == '__main__':
     acti = EmailActive('cxy','chengxinyao1991@163.com','python fan test')
     print(acti)
-    info = acti.send_active_eamil()
+    info = acti.send_active_email()
     print(info)
